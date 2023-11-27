@@ -1,12 +1,18 @@
+import { Link } from 'react-router-dom';
 import styles from './NavBar.module.css'
 
 const NavBar = () => {
   return (
     <div className={styles.nav}>
-      <h2 className={styles.label}>PizzaShop</h2>
+      <Link className={styles.label} to='/'>
+        PizzaShop
+      </Link>
       <div className={styles.buttonGroup}>
-        <button className={styles.button}>Showcase</button>
-        <button className={styles.button}>Cart</button>
+        <Link to='/shop'>
+          <button className={styles.button}>
+            Shop
+          </button>
+        </Link>
       </div>
     </div>
   );

@@ -8,7 +8,9 @@
 }
 
 .label {
-  margin: 3px;
+  font-size: x-large;
+  text-decoration: none;
+  color: black;
 }
 
 .buttonGroup {
