@@ -1,0 +1,49 @@
+.carousel {
+  height: 90vh;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: grid;
+  grid-template-columns: repeat(20, 5%);
+  grid-template-rows: repeat(10, 10%);
+  transition: 1.5s;
+}
+
+.img1 {
+  background-image: url('../assets/img1.jpg');
+}
+
+.img2 {
+  background-image: url('../assets/img2.jpg');
+}
+
+.img3 {
+  background-image: url('../assets/img3.jpg');
+}
+
+.btn1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+
+.btn2 {
+  grid-column-start: 20;
+  grid-column-end: 21;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+
+.button {
+  color: white;
+  background: #111111;
+  opacity: 0.5;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  border-style: none;
+  transition: background-color 0.5s linear;
+}

@@ -1,0 +1,14 @@
+button:hover {
+  background-color: #8f0d02;
+  transition: background-color 0.1s linear;
+}
+
+.main {
+  flex: 1;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
