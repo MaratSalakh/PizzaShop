@@ -10,7 +10,7 @@ const NavBar = () => {
       <div className={styles.buttonGroup}>
         <Link to='/shop'>
           <button className={styles.button}>
-            Shop
+            Menu
           </button>
         </Link>
       </div>
