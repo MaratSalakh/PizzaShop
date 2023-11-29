@@ -19,7 +19,7 @@
 
 
 .button {
-  background: #C51605;
+  background: #FD8D14;
   margin: 5px;
   padding: 10px;
   border-radius: 20px;
@@ -28,6 +28,6 @@
 }
 
 .button:hover {
-  background-color: #8f0d02;
+  background-color: #ff6f00;
   transition: background-color 0.1s linear;
 }

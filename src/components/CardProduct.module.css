@@ -13,7 +13,8 @@
 }
 
 .button {
-  background: #C51605;
+  color: #ff6200;
+  background: #f7bb7a;
   margin: 5px;
   padding: 10px;
   border-radius: 20px;
@@ -22,7 +23,7 @@
 }
 
 .button:hover {
-  background-color: #8f0d02;
+  background-color: #fd992e;
   transition: background-color 0.1s linear;
 }
 
@@ -32,6 +33,11 @@
 
 .img {
   border-radius: 25%;
+  transition: transform 0.5s;
+}
+
+.img:hover {
+  transform: translateY(10px);
 }
 
 .cost {
