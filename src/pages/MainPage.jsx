@@ -1,5 +1,5 @@
 import NavBar from '../components/NavBar'
-import styles from '../App.module.css'
+import styles from './MainPage.module.css'
 import Carousel from '../components/Carousel'
 import Footer from '../components/Footer'
 

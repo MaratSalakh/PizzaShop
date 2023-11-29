@@ -1,0 +1,39 @@
+.card {
+  width: 300px;
+  display: grid;
+  margin: 15px;
+  grid-template-columns: 300px;
+}
+
+.cardFooter {
+  display: grid;
+  grid-template-columns: 103px 103px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button {
+  background: #C51605;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 20px;
+  border-style: none;
+  transition: background-color 0.5s linear;
+}
+
+.button:hover {
+  background-color: #8f0d02;
+  transition: background-color 0.1s linear;
+}
+
+.description {
+  color: gray;
+}
+
+.img {
+  border-radius: 25%;
+}
+
+.cost {
+  font-weight: bold;
+}
