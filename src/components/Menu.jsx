@@ -1,20 +1,19 @@
 import CardProduct from "./CardProduct";
 import styles from './Menu.module.css'
+import { useSelector } from "react-redux";
 
 const Menu = () => {
-
+  const products = useSelector((state) => state.products.entities);
+  const ids = useSelector((state) => state.products.ids);
 
   return (
     <div className={styles.menu}>
-      <CardProduct></CardProduct>
-      <CardProduct></CardProduct>
-      <CardProduct></CardProduct>
-      <CardProduct></CardProduct>
-      <CardProduct></CardProduct>
-      <CardProduct></CardProduct>
-      <CardProduct></CardProduct>
-      <CardProduct></CardProduct>
-      <CardProduct></CardProduct>
+      {ids.map((id) => {
+        const product = products[id];
+        return (
+          <CardProduct key={id} product={product}></CardProduct>
+        );
+      })}
     </div>
   );
 };

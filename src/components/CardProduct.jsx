@@ -1,18 +1,24 @@
 import styles from './CardProduct.module.css'
-import img1Url from '../assets/1.jpg'
+import PropTypes from 'prop-types'
 
-const CardProduct = () => {
+const CardProduct = (props) => {
+  const { price, img, name } = props.product;
+
   return (
     <div className={styles.card}>
-      <img className={styles.img} src={img1Url} alt="pizza" width={300} height={300} />
-      <h2>Cherry Pie</h2>
+      <img className={styles.img} src={img} alt="pizza" width={300} height={300} />
+      <h2>{name}</h2>
       <span className={styles.description}>Delicious pie with cherry</span>
       <div className={styles.cardFooter}>
-        <span className={styles.cost}>from 5 $</span>
+        <span className={styles.cost}>from {price} $</span>
         <button className={styles.button}>Choose</button>
       </div>
     </div>
   );
+};
+
+CardProduct.propTypes = {
+  product: PropTypes.object
 }
 
 export default CardProduct;
