@@ -7,7 +7,7 @@
 
 .cardFooter {
   display: grid;
-  grid-template-columns: 103px 103px;
+  grid-template-columns: 200px 103px;
   justify-content: space-between;
   align-items: center;
 }
