@@ -13,6 +13,11 @@ const NavBar = () => {
             Menu
           </button>
         </Link>
+        <Link to='/cart'>
+          <button className={styles.button}>
+            Cart
+          </button>
+        </Link>
       </div>
     </div>
   );
