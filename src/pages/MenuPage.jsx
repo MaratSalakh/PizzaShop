@@ -7,7 +7,7 @@ const ShopPage = () => {
   return (
     <div className={styles.page}>
       <NavBar></NavBar>
-      <Menu menuType='menuPage'></Menu>
+      <Menu className={styles.main} menuType='menuPage'></Menu>
       <Footer></Footer>
     </div>
   )

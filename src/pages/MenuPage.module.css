@@ -1,4 +1,11 @@
 .page {
   font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   font-family: "Roboto", "Arial", sans-serif;
+}
+
+.main {
+  flex-grow: 1;
 }
