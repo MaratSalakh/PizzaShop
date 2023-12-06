@@ -1,18 +1,20 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  modalState: false,
+  modalIsOpen: true,
 };
 
 const modalSlice = createSlice({
-  name: 'modalIsOpen',
+  name: 'modalState',
   initialState,
   reducers: {
     openModal: (state) => {
-      state.modalState = true;
+      document.body.classList.add('scrollLock');
+      state.modalIsOpen = true;
     },
     closeModal: (state) => {
-      state.modalState = false;
+      document.body.classList.remove('scrollLock');
+      state.modalIsOpen = false;
     }
   }
 });

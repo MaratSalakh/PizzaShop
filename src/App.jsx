@@ -4,8 +4,6 @@ import MenuPage from './pages/MenuPage'
 import CartPage from './pages/CartPage'
 
 function App() {
-
-
   return (
     <BrowserRouter>
       <Routes>
