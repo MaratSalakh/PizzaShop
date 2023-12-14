@@ -1,10 +1,14 @@
 import styles from './CardProduct.module.css'
 import PropTypes from 'prop-types'
-import { openModal } from '../slices/modalSlice';
+
+import { ModalCard } from './ModalCard';
+
+import { openModal } from '../slices/productsSlice';
 import { useDispatch } from 'react-redux';
 
 const CardProduct = (props) => {
-  const { price, img, name } = props.product;
+  const { price, img, name, id } = props.product;
+
   const dispatch = useDispatch();
 
   return (
@@ -14,14 +18,16 @@ const CardProduct = (props) => {
       <span className={styles.description}>Delicious pie with cherry</span>
       <div className={styles.cardFooter}>
         <span className={styles.cost}>from {price} $</span>
-        <button className={styles.button} onClick={() => dispatch(openModal())}>Choose</button>
+        <button className={styles.button} onClick={() => dispatch(openModal(id))}>Choose</button>
       </div>
+      <ModalCard key={id} product={props.product}></ModalCard>
     </div>
   );
 };
 
 CardProduct.propTypes = {
-  product: PropTypes.object
+  product: PropTypes.object,
+  openModalFunc: PropTypes.func,
 }
 
 export default CardProduct;

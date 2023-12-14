@@ -39,7 +39,7 @@ const productsSlice = createSlice({
     },
     closeModal: (state, action) => {
       document.body.classList.remove('scrollLock');
-      state.entities[action.payload].modalIsOpen = true;
+      state.entities[action.payload].modalIsOpen = false;
     }
   },
 });
