@@ -15,7 +15,7 @@ const Menu = (props) => {
       {ids.map((id) => {
         const product = products[id];
         return (
-          <CardProduct key={id} product={product}></CardProduct>
+          <CardProduct cardType={'menu'} key={id} product={product}></CardProduct>
         );
       })}
     </div>
@@ -28,7 +28,7 @@ const Menu = (props) => {
         .map((id) => {
           const product = products[id];
           return (
-            <CardProduct key={id} product={product}></CardProduct>
+            <CardProduct cardType={'cart'} key={id} product={product}></CardProduct>
           );
         })}
     </div>

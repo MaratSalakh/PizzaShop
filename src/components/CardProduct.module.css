@@ -17,12 +17,14 @@
   background: #f7bb7a;
   margin: 5px;
   padding: 10px;
-  border-radius: 20px;
+  border-radius: 5px;
   border-style: none;
   transition: background-color 0.5s linear;
 }
 
-.button:hover {
+.button:hover,
+.rightButton:hover,
+.leftButton:hover {
   background-color: #fd992e;
   transition: background-color 0.1s linear;
 }
@@ -42,4 +44,18 @@
 
 .cost {
   font-weight: bold;
+}
+
+.cardFooterBasket {
+  display: grid;
+  grid-template-columns: 65px 90px 95px 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttonGroupBasket {
+  display: grid;
+  grid-template-columns: repeat(3, 25px);
+  justify-content: space-between;
+  align-items: center;
 }
