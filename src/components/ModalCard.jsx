@@ -6,7 +6,7 @@ import { countPlus } from '../slices/productsSlice'
 import PropTypes from 'prop-types'
 
 export const ModalCard = (props) => {
-  const { id, count, img, name, modalIsOpen } = props.product;
+  const { id, img, name, modalIsOpen, description } = props.product;
 
   const dispatch = useDispatch();
 
@@ -16,16 +16,21 @@ export const ModalCard = (props) => {
   return (
     <div className={showHideClassName}>
       <section className={styles.modalMain}>
-        <img src={img} alt="pizza" height={300} width={300} />
-        <h1>{name}</h1>
-        <span>Description</span>
-        <button type='button' onClick={() => dispatch(countPlus(id))}>Add in cart</button>
-        <button type='button' onClick={() => dispatch(closeModal(id))}>
-          close
-        </button>
-        <span>{count}</span>
-      </section>
-    </div>
+        <div className={styles.innerContent}>
+          <img className={styles.img} src={img} alt="pizza" height={300} width={300} />
+          <div className={styles.pizzaSettings}>
+            <div className={styles.header}>
+              <h1>{name}</h1>
+            </div>
+            <span className={styles.description}>{description}</span>
+            <button className={cn(styles.button, styles.addButton)} type='button' onClick={() => {
+              dispatch(countPlus(id));
+              dispatch(closeModal(id));
+            }}>Add in cart</button>
+          </div>
+        </div>
+      </section >
+    </div >
   );
 };
 
