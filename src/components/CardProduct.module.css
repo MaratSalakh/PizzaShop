@@ -24,7 +24,8 @@
 
 .button:hover,
 .rightButton:hover,
-.leftButton:hover {
+.leftButton:hover,
+.counter:hover {
   background-color: #fd992e;
   transition: background-color 0.1s linear;
 }
@@ -55,7 +56,41 @@
 
 .buttonGroupBasket {
   display: grid;
-  grid-template-columns: repeat(3, 25px);
-  justify-content: space-between;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: stretch;
   align-items: center;
+}
+
+.leftButton {
+  color: #ff6200;
+  background: #f7bb7a;
+  padding: 10px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-style: none;
+  transition: background-color 0.5s linear;
+}
+
+.rightButton {
+  color: #ff6200;
+  background: #f7bb7a;
+  padding: 10px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-style: none;
+  transition: background-color 0.5s linear;
+}
+
+.counter {
+  color: #ff6200;
+  background: #f7bb7a;
+  padding: 10px;
+  border-style: none;
+  transition: background-color 0.5s linear;
+}
+
+@media (max-width: 450px) {
+  .card {
+    font-size: 5rem;
+  }
 }
