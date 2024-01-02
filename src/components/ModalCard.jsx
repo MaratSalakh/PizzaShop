@@ -14,8 +14,8 @@ export const ModalCard = (props) => {
     cn(styles.modal, styles.displayBlock) : cn(styles.modal, styles.displayNone);
 
   return (
-    <div className={showHideClassName}>
-      <section className={styles.modalMain}>
+    <div onClick={() => dispatch(closeModal(id))} className={showHideClassName}>
+      <section onClick={(e) => e.stopPropagation()} className={styles.modalMain}>
         <div className={styles.innerContent}>
           <img className={styles.img} src={img} alt="pizza" height={300} width={300} />
           <div className={styles.pizzaSettings}>
