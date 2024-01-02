@@ -45,6 +45,7 @@ const CardProduct = (props) => {
   const cartCard = (
     <div className={styles.card}>
       <img
+        onClick={() => dispatch(openModal(id))}
         className={styles.img}
         src={img}
         alt="pizza"

@@ -1,18 +1,38 @@
 import styles from "./ModalCard.module.css";
 import cn from "classnames";
 import { useDispatch } from "react-redux";
-import { closeModal } from "../slices/productsSlice";
-import { countPlus } from "../slices/productsSlice";
+import {
+  closeModal,
+  countPlus,
+  setSmallSize,
+  setMediumSize,
+  setBigSize,
+} from "../slices/productsSlice";
 import PropTypes from "prop-types";
 
 export const ModalCard = (props) => {
-  const { id, img, name, modalIsOpen, description } = props.product;
+  const { id, img, name, modalIsOpen, description, size } = props.product;
 
   const dispatch = useDispatch();
 
   const showHideClassName = modalIsOpen
     ? cn(styles.modal, styles.displayBlock)
     : cn(styles.modal, styles.displayNone);
+
+  const smallBtnStyle = cn({
+    [styles.smallButton]: size !== "small",
+    [styles.smallButtonChosen]: size === "small",
+  });
+
+  const mediumBtnStyle = cn({
+    [styles.mediumButton]: size !== "medium",
+    [styles.mediumButtonChosen]: size === "medium",
+  });
+
+  const bigBtnStyle = cn({
+    [styles.bigButton]: size !== "big",
+    [styles.bigButtonChosen]: size === "big",
+  });
 
   return (
     <div onClick={() => dispatch(closeModal(id))} className={showHideClassName}>
@@ -31,11 +51,21 @@ export const ModalCard = (props) => {
             <h1>{name}</h1>
             <span className={styles.description}>{description}</span>
             <div className={styles.buttonGroup}>
-              <button className={styles.leftButton} type="button">
+              <button
+                onClick={() => dispatch(setSmallSize(id))}
+                className={smallBtnStyle}
+                type="button">
                 Small
               </button>
-              <button className={styles.counter}>Medium</button>
-              <button className={styles.rightButton} type="button">
+              <button
+                onClick={() => dispatch(setMediumSize(id))}
+                className={mediumBtnStyle}>
+                Medium
+              </button>
+              <button
+                onClick={() => dispatch(setBigSize(id))}
+                className={bigBtnStyle}
+                type="button">
                 Big
               </button>
             </div>

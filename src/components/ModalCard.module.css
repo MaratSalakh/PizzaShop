@@ -1,6 +1,6 @@
-.rightButton:hover,
-.leftButton:hover,
-.counter:hover,
+.bigButton:hover,
+.smallButton:hover,
+.mediumButton:hover,
 .button:hover {
   background-color: #fd992e;
   transition: background-color 0.1s linear;
@@ -13,7 +13,35 @@
   align-items: center;
 }
 
-.leftButton {
+.smallButtonChosen {
+  color: #ff6200;
+  background: #fd992e;
+  padding: 10px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-style: none;
+  transition: background-color 0.5s linear;
+}
+
+.bigButtonChosen {
+  color: #ff6200;
+  background: #fd992e;
+  padding: 10px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-style: none;
+  transition: background-color 0.5s linear;
+}
+
+.mediumButtonChosen {
+  color: #ff6200;
+  background: #fd992e;
+  padding: 10px;
+  border-style: none;
+  transition: background-color 0.5s linear;
+}
+
+.smallButton {
   color: #ff6200;
   background: #f7bb7a;
   padding: 10px;
@@ -23,7 +51,7 @@
   transition: background-color 0.5s linear;
 }
 
-.rightButton {
+.bigButton {
   color: #ff6200;
   background: #f7bb7a;
   padding: 10px;
@@ -33,7 +61,7 @@
   transition: background-color 0.5s linear;
 }
 
-.counter {
+.mediumButton {
   color: #ff6200;
   background: #f7bb7a;
   padding: 10px;
