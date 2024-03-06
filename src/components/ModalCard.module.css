@@ -2,7 +2,8 @@
 .smallButton:hover,
 .mediumButton:hover,
 .button:hover {
-  background-color: #fd992e;
+  cursor: pointer;
+  background-color: rgb(255, 210, 179);
   transition: background-color 0.1s linear;
 }
 
@@ -14,8 +15,8 @@
 }
 
 .smallButtonChosen {
-  color: #ff6200;
-  background: #fd992e;
+  color: rgb(209, 87, 0);
+  background-color: rgb(255, 210, 179);
   padding: 10px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -24,8 +25,8 @@
 }
 
 .bigButtonChosen {
-  color: #ff6200;
-  background: #fd992e;
+  color: rgb(209, 87, 0);
+  background-color: rgb(255, 210, 179);
   padding: 10px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -34,16 +35,16 @@
 }
 
 .mediumButtonChosen {
-  color: #ff6200;
-  background: #fd992e;
+  color: rgb(209, 87, 0);
+  background-color: rgb(255, 210, 179);
   padding: 10px;
   border-style: none;
   transition: background-color 0.5s linear;
 }
 
 .smallButton {
-  color: #ff6200;
-  background: #f7bb7a;
+  color: rgb(209, 87, 0);
+  background: rgb(255, 240, 230);
   padding: 10px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -52,8 +53,8 @@
 }
 
 .bigButton {
-  color: #ff6200;
-  background: #f7bb7a;
+  color: rgb(209, 87, 0);
+  background: rgb(255, 240, 230);
   padding: 10px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -62,8 +63,8 @@
 }
 
 .mediumButton {
-  color: #ff6200;
-  background: #f7bb7a;
+  color: rgb(209, 87, 0);
+  background: rgb(255, 240, 230);
   padding: 10px;
   border-style: none;
   transition: background-color 0.5s linear;
@@ -118,8 +119,8 @@
   }
 
   .button {
-    color: #ff6200;
-    background: #f7bb7a;
+    color: rgb(209, 87, 0);
+    background: rgb(255, 240, 230);
     margin: 5px;
     padding: 10px;
     border-radius: 5px;
@@ -178,8 +179,8 @@
   }
 
   .button {
-    color: #ff6200;
-    background: #f7bb7a;
+    color: rgb(209, 87, 0);
+    background: rgb(255, 240, 230);
     margin: 5px;
     padding: 10px;
     border-radius: 5px;

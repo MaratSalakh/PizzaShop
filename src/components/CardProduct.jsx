@@ -1,16 +1,16 @@
-import styles from "./CardProduct.module.css";
-import PropTypes from "prop-types";
+import styles from './CardProduct.module.css';
+import PropTypes from 'prop-types';
 // import cn from 'classnames';
 
-import { ModalCard } from "./ModalCard";
+import { ModalCard } from './ModalCard';
 
 import {
   openModal,
   countMinus,
   countPlus,
   resetCount,
-} from "../slices/productsSlice";
-import { useDispatch } from "react-redux";
+} from '../slices/productsSlice';
+import { useDispatch } from 'react-redux';
 
 const CardProduct = (props) => {
   const { price, img, name, id, count, description } = props.product;
@@ -28,7 +28,11 @@ const CardProduct = (props) => {
         width={300}
         height={300}
       />
-      <h2 onClick={() => dispatch(openModal(id))}>{name}</h2>
+      <h2
+        className={styles.titleOfProduct}
+        onClick={() => dispatch(openModal(id))}>
+        {name}
+      </h2>
       <span className={styles.description}>{description}</span>
       <div className={styles.cardFooter}>
         <span className={styles.cost}>from {price} $</span>
@@ -52,7 +56,11 @@ const CardProduct = (props) => {
         width={300}
         height={300}
       />
-      <h2>{name}</h2>
+      <h2
+        className={styles.titleOfProduct}
+        onClick={() => dispatch(openModal(id))}>
+        {name}
+      </h2>
       <span className={styles.description}>Delicious pie with cherry</span>
       <div className={styles.cardFooterBasket}>
         <span className={styles.cost}>{price * count} $</span>
@@ -88,7 +96,7 @@ const CardProduct = (props) => {
     </div>
   );
 
-  return cardType === "menu" ? menuCard : cartCard;
+  return cardType === 'menu' ? menuCard : cartCard;
 };
 
 CardProduct.propTypes = {

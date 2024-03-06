@@ -17,9 +17,9 @@
   justify-self: end;
 }
 
-
 .button {
-  background: #FD8D14;
+  color: white;
+  background-color: rgb(255, 105, 0);
   margin: 5px;
   padding: 10px;
   border-radius: 5px;
@@ -28,6 +28,7 @@
 }
 
 .button:hover {
-  background-color: #ff6f00;
+  cursor: pointer;
+  background-color: rgb(232, 97, 0);
   transition: background-color 0.1s linear;
 }

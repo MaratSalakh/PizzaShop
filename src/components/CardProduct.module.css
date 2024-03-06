@@ -13,8 +13,8 @@
 }
 
 .button {
-  color: #ff6200;
-  background: #f7bb7a;
+  color: rgb(209, 87, 0);
+  background: rgb(255, 240, 230);
   margin: 5px;
   padding: 10px;
   border-radius: 5px;
@@ -26,8 +26,13 @@
 .rightButton:hover,
 .leftButton:hover,
 .counter:hover {
-  background-color: #fd992e;
+  cursor: pointer;
+  background-color: rgb(255, 210, 179);
   transition: background-color 0.1s linear;
+}
+
+.titleOfProduct {
+  cursor: pointer;
 }
 
 .description {
@@ -40,6 +45,7 @@
 }
 
 .img:hover {
+  cursor: pointer;
   transform: translateY(5px);
 }
 
@@ -62,8 +68,8 @@
 }
 
 .leftButton {
-  color: #ff6200;
-  background: #f7bb7a;
+  color: rgb(209, 87, 0);
+  background: rgb(255, 240, 230);
   padding: 10px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -72,8 +78,8 @@
 }
 
 .rightButton {
-  color: #ff6200;
-  background: #f7bb7a;
+  color: rgb(209, 87, 0);
+  background: rgb(255, 240, 230);
   padding: 10px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -82,8 +88,8 @@
 }
 
 .counter {
-  color: #ff6200;
-  background: #f7bb7a;
+  color: rgb(209, 87, 0);
+  background: rgb(255, 240, 230);
   padding: 10px;
   border-style: none;
   transition: background-color 0.5s linear;
