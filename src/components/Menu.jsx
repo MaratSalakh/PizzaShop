@@ -1,8 +1,8 @@
 import CardProduct from "./CardProduct";
 
-import styles from './Menu.module.css'
+import styles from "./Menu.module.css";
 import { useSelector } from "react-redux";
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
 const Menu = (props) => {
   const { menuType } = props;
@@ -15,7 +15,10 @@ const Menu = (props) => {
       {ids.map((id) => {
         const product = products[id];
         return (
-          <CardProduct cardType={'menu'} key={id} product={product}></CardProduct>
+          <CardProduct
+            cardType={"menu"}
+            key={id}
+            product={product}></CardProduct>
         );
       })}
     </div>
@@ -28,17 +31,20 @@ const Menu = (props) => {
         .map((id) => {
           const product = products[id];
           return (
-            <CardProduct cardType={'cart'} key={id} product={product}></CardProduct>
+            <CardProduct
+              cardType={"cart"}
+              key={id}
+              product={product}></CardProduct>
           );
         })}
     </div>
   );
 
-  return (menuType === 'menuPage' ? menuPage : cartPage);
+  return menuType === "menuPage" ? menuPage : cartPage;
 };
 
 Menu.propTypes = {
-  menuType: PropTypes.string
-}
+  menuType: PropTypes.string,
+};
 
 export default Menu;

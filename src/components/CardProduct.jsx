@@ -1,16 +1,16 @@
-import styles from './CardProduct.module.css';
-import PropTypes from 'prop-types';
+import styles from "./CardProduct.module.css";
+import PropTypes from "prop-types";
 // import cn from 'classnames';
 
-import { ModalCard } from './ModalCard';
+import { ModalCard } from "./ModalCard";
 
 import {
   openModal,
   countMinus,
   countPlus,
   resetCount,
-} from '../slices/productsSlice';
-import { useDispatch } from 'react-redux';
+} from "../slices/productsSlice";
+import { useDispatch } from "react-redux";
 
 const CardProduct = (props) => {
   const { price, img, name, id, count, description } = props.product;
@@ -96,7 +96,7 @@ const CardProduct = (props) => {
     </div>
   );
 
-  return cardType === 'menu' ? menuCard : cartCard;
+  return cardType === "menu" ? menuCard : cartCard;
 };
 
 CardProduct.propTypes = {
