@@ -12,3 +12,8 @@ html {
 .scrollLock {
   overflow: hidden;
 }
+
+*:focus {
+  outline: 2px solid rgb(255, 240, 230);
+  outline-offset: 3px;
+}
